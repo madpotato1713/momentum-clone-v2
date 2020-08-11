@@ -17,8 +17,11 @@
         placeholder="What is your name?"
       />
     </form>
+    <div class="welcomeBox">
+      <span class="js-welcome welcome"></span>
+      <span class="js-greeting greeting"></span>
+    </div>
     <button class="js-remove remove">Edit your name</button>
-    <div class="js-greeting greeting"></div>
     <form class="js-toDoForm">
       <input
         type="text"
@@ -26,8 +29,15 @@
         placeholder="Whar are you gonna do today?"
       />
     </form>
-    <ul class="js-todoList"></ul>
+    <div class="js-todoHeader todoHeader">To Do List</div>
+    <ul class="js-todoList todoList"></ul>
+    <div class="js-doneHeader doneHeader">Job Done</div>
+    <ul class="js-doneList doneList"></ul>
+    <div class="js-weather"></div>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>
+    <script src="todos.js"></script>
+    <script src="weather.js"></script>
+    <script src="background.js"></script>
   </body>
 </html>
