@@ -12,6 +12,7 @@ body {
 body {
   background-color: #2c3e50;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -37,6 +38,11 @@ body {
   text-decoration: line-through;
 }
 
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
 /* 아래는 바꾸자 */
 
 @keyframes fadeIn {
@@ -56,4 +62,5 @@ body {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+  /* opacity: 0.5; */
 }
