@@ -15,11 +15,11 @@ function getGeo(lat, lon) {
       const place = json.name;
       const main = json.weather[0].main;
       const description = json.weather[0].description;
-      const icon = json.weather[0].icon;
+      // const icon = json.weather[0].icon;
 
       paintImage(main);
 
-      weather.innerText = `${temperature}, ${description} @ ${place} ${icon}`;
+      weather.innerText = `${temperature}, ${description} @ ${place}`;
     });
 }
 
