@@ -1,9 +1,9 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector(".js-todoInput"),
   todoList = document.querySelector(".js-todoList"),
-  doneList = document.querySelector(".js-doneList"),
-  todoHeader = document.querySelector(".js-todoHeader"),
-  doneHeader = document.querySelector(".js-doneHeader");
+  doneList = document.querySelector(".js-doneList");
+// todoHeader = document.querySelector(".js-todoHeader"),
+// doneHeader = document.querySelector(".js-doneHeader");
 
 const TODO_LIST = "todoList";
 const DONE_LIST = "doneList";
@@ -42,12 +42,12 @@ function handleDelete(event) {
     saveDones();
   }
 
-  if (toDos.length <= 0) {
-    todoHeader.classList.remove(SHOWING_CLASS);
-  }
-  if (dones.length <= 0) {
-    doneHeader.classList.remove(SHOWING_CLASS);
-  }
+  // if (toDos.length <= 0) {
+  //   todoHeader.classList.remove(SHOWING_CLASS);
+  // }
+  // if (dones.length <= 0) {
+  //   doneHeader.classList.remove(SHOWING_CLASS);
+  // }
 }
 
 function handleCheck(event) {
@@ -58,16 +58,16 @@ function handleCheck(event) {
 
   if (ulName.className.search(JS_TODO_LIST) !== -1) {
     paintDoneList(value);
-    if (toDos.length <= 0) {
-      todoHeader.classList.remove(SHOWING_CLASS);
-    }
-    doneHeader.classList.add(SHOWING_CLASS);
+    // if (toDos.length <= 0) {
+    //   todoHeader.classList.remove(SHOWING_CLASS);
+    // }
+    // doneHeader.classList.add(SHOWING_CLASS);
   } else if (ulName.className.search(JS_DONE_LIST) !== -1) {
     paintToDoList(value);
-    if (toDos.length <= 0) {
-      doneHeader.classList.remove(SHOWING_CLASS);
-    }
-    todoHeader.classList.add(SHOWING_CLASS);
+    // if (toDos.length <= 0) {
+    //   doneHeader.classList.remove(SHOWING_CLASS);
+    // }
+    // todoHeader.classList.add(SHOWING_CLASS);
   }
 }
 
@@ -128,7 +128,7 @@ function paintDoneList(value) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  todoHeader.classList.add(SHOWING_CLASS);
+  // todoHeader.classList.add(SHOWING_CLASS);
   paintToDoList(toDoInput.value);
   toDoInput.value = "";
 }
@@ -137,9 +137,9 @@ function load() {
   const toDosStr = localStorage.getItem(TODO_LIST);
   const toDoList = JSON.parse(toDosStr);
   if (toDosStr !== null) {
-    if (toDoList.length > 0) {
-      todoHeader.classList.add(SHOWING_CLASS);
-    }
+    // if (toDoList.length > 0) {
+    //   todoHeader.classList.add(SHOWING_CLASS);
+    // }
     toDoList.forEach((toDo) => {
       paintToDoList(toDo.value);
     });
@@ -148,9 +148,9 @@ function load() {
   const doneStr = localStorage.getItem(DONE_LIST);
   const doneList = JSON.parse(doneStr);
   if (doneStr !== null) {
-    if (doneList.length > 0) {
-      doneHeader.classList.add(SHOWING_CLASS);
-    }
+    // if (doneList.length > 0) {
+    //   doneHeader.classList.add(SHOWING_CLASS);
+    // }
     doneList.forEach((done) => {
       paintDoneList(done.value);
     });
