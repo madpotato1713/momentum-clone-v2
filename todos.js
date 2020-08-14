@@ -79,6 +79,7 @@ function paintToDoList(value) {
   const text = document.createElement("span");
   text.innerText = value;
   const delBtn = document.createElement("button");
+  delBtn.classList.add("delBtn");
   delBtn.innerText = "❌";
   delBtn.addEventListener("click", handleDelete);
   const newId = toDos.length + 1;
@@ -107,6 +108,7 @@ function paintDoneList(value) {
   const text = document.createElement("span");
   text.innerText = value;
   const delBtn = document.createElement("button");
+  delBtn.classList.add("delBtn");
   delBtn.innerText = "❌";
   delBtn.addEventListener("click", handleDelete);
   const newId = dones.length + 1;

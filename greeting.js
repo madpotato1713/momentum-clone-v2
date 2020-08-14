@@ -62,7 +62,7 @@ function setWelcome() {
   }
   CIRCUMSTANCE = start;
 
-  welcome.innerText = `good ${start},\u00a0`;
+  welcome.innerText = `Good ${start},\u00a0`;
 }
 
 function init() {

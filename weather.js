@@ -18,6 +18,10 @@ function getLocation(place) {
   loc.innerText = place;
 }
 
+function getDetail(description) {
+  weather.innerText = description;
+}
+
 function getGeo(lat, lon) {
   fetch(
     `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
@@ -36,8 +40,7 @@ function getGeo(lat, lon) {
       getIcon(icon);
       getTemperature(temp);
       getLocation(place);
-
-      weather.innerText = `${description}`;
+      getDetail(description);
     });
 }
 

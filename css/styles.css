@@ -46,31 +46,27 @@ body {
   outline: none;
   margin-top: 20px;
   width: 700px;
-  height: 70px;
+  height: 50px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 2px solid white;
-  /* border: 1px solid #e6e6e6; */
-  /* border: 1px solid #bbbbbb; */
-  /* border-radius: 20px; */
-  /* padding-left: 40px; */
-  /* background-color: red; */
+  color: white;
+  font-size: 30px;
 }
 
 .nameInput::placeholder,
 .todoInput::placeholder {
   color: white;
   font-size: 30px;
-  text-align: center;
-  /* color: black;
-  opacity: 0.4; */
 }
 
-.nameInput::focus,
-.todoInput::focus {
+.nameInput:focus,
+.todoInput:focus {
   border: none;
   border-bottom: 2px solid white;
-  content: " ";
+  content: "";
+  color: white;
+  font-size: 30px;
 }
 
 .nameInput:focus::placeholder,
@@ -86,8 +82,26 @@ body {
   display: flex;
 }
 
-.doneList > li {
+.welcome,
+.greeting,
+.removeBtn {
+  margin-top: 20px;
+  margin-bottom: 21px;
+}
+
+.welcome,
+.greeting {
+  font-size: 50px;
+}
+
+.doneList > li > span {
   text-decoration: line-through;
+}
+
+.delBtn {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 h1 {
@@ -120,16 +134,41 @@ h1 {
   font-size: 28px;
 }
 
-.location {
+.weather {
   color: white;
   font-size: 18px;
   margin-top: -10px;
 }
 
+.location {
+  color: white;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
 .listBox {
-  width: 500px;
+  margin-top: 20px;
+  width: 600px;
   display: flex;
   justify-content: space-around;
+}
+
+.division {
+  width: 2px;
+  background-color: white;
+}
+
+.list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .listHeader {
