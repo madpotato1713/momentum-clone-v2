@@ -7,7 +7,7 @@ const API_KEY = "ca7d7a8a54939191522b490df6f40969";
 const GEO = "geo";
 
 function getIcon(icon) {
-  weatherIcon.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 }
 
 function getTemperature(temp) {
