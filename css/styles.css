@@ -35,7 +35,7 @@ body {
   font-size: 30px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.05);
   width: 680px;
