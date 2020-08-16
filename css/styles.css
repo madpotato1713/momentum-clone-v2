@@ -96,12 +96,39 @@ body {
 
 .doneList > li > span {
   text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.todoList > li > span {
+  margin-left: 5px;
 }
 
 .delBtn {
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0);
+  margin-left: 10px;
+}
+
+.checkbox {
+  all: unset;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgb(180, 177, 177);
+  position: relative;
+  background-color: white;
+}
+
+.checkbox:checked:before {
+  /* content: "\f00c"; */
+  content: "\2713";
+  position: absolute;
+  font-size: 12px;
+  font-weight: 700;
+  top: 0px;
+  color: #e2273e;
 }
 
 h1 {
@@ -148,7 +175,7 @@ h1 {
 
 .listBox {
   margin-top: 20px;
-  width: 600px;
+  width: 602px;
   display: flex;
   justify-content: space-around;
 }
@@ -162,7 +189,14 @@ h1 {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  width: 300px;
+}
+
+.li {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -175,11 +209,8 @@ li {
   color: white;
   font-size: 30px;
   font-size: 700;
-}
-
-.list {
-  color: white;
-  font-size: 20px;
+  text-align: center;
+  width: 300px;
 }
 
 /* 아래는 바꾸자 */
@@ -201,5 +232,5 @@ li {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
-  opacity: 0.7;
+  opacity: 0.8;
 }

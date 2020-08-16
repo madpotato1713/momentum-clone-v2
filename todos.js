@@ -73,7 +73,9 @@ function handleCheck(event) {
 
 function paintToDoList(value) {
   const li = document.createElement("li");
+  li.classList.add("li");
   const checkbox = document.createElement("input");
+  checkbox.classList.add("checkbox");
   checkbox.type = "checkbox";
   checkbox.addEventListener("change", handleCheck);
   const text = document.createElement("span");
@@ -101,7 +103,9 @@ function paintToDoList(value) {
 
 function paintDoneList(value) {
   const li = document.createElement("li");
+  li.classList.add("li");
   const checkbox = document.createElement("input");
+  checkbox.classList.add("checkbox");
   checkbox.type = "checkbox";
   checkbox.checked = true;
   checkbox.addEventListener("change", handleCheck);
