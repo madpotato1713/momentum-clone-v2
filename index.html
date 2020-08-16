@@ -22,7 +22,7 @@
       <span class="js-greeting greeting"></span>
       <button class="js-remove removeBtn">Edit your name</button>
     </div>
-    <form class="js-toDoForm">
+    <form class="js-toDoForm toDoFrom">
       <input
         type="text"
         class="js-todoInput todoInput"
@@ -31,13 +31,19 @@
       />
     </form>
     <div class="listBox">
-      <div>
-        <div class="js-todoHeader todoHeader listHeader">To Do List</div>
+      <div class=subListBox>
+        <div class="js-todoHeader todoHeader listHeader">
+          <div class="text">To Do List</div>
+          <div class="horizon"></div>
+        </div>
         <ul class="js-todoList todoList list"></ul>
       </div>
       <div class="division"></div>
-      <div>
-        <div class="js-doneHeader doneHeader listHeader">Job Done</div>
+      <div class=subListBox>
+        <div class="js-doneHeader doneHeader listHeader">
+          <div class="text">Job Done</div>
+          <div class="horizon"></div>
+        </div>
         <ul class="js-doneList doneList list"></ul>
       </div>
     </div>

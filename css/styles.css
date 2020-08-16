@@ -25,12 +25,20 @@ body {
   display: none;
 }
 
+.nameForm {
+  margin-top: 21px;
+}
+
 .welcomeBox {
   margin-top: 20px;
   color: white;
   font-size: 30px;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 680px;
 }
 
 .removeBtn {
@@ -76,6 +84,10 @@ body {
 
 .showing {
   display: block;
+}
+
+.welcomeBox .showing {
+  animation: fadeIn 1s linear;
 }
 
 .welcomeBox {
@@ -135,6 +147,10 @@ h1 {
   font-size: 150px;
   font-weight: 500;
   color: white;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  width: 900px;
+  text-align: center;
 }
 
 .weatherBox {
@@ -144,9 +160,14 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 10px;
+  width: 170px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .subWeatherBox {
+  margin-top: -10px;
   display: flex;
   align-items: center;
 }
@@ -175,7 +196,7 @@ h1 {
 
 .listBox {
   margin-top: 20px;
-  width: 602px;
+  width: 630px;
   display: flex;
   justify-content: space-around;
 }
@@ -183,6 +204,7 @@ h1 {
 .division {
   width: 2px;
   background-color: white;
+  margin: 0px 2px;
 }
 
 .list {
@@ -209,11 +231,25 @@ li {
   color: white;
   font-size: 30px;
   font-size: 700;
-  text-align: center;
   width: 300px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
-/* 아래는 바꾸자 */
+.subListBox {
+  padding-top: 10px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.horizon {
+  margin-top: 10px;
+  width: 280px;
+  border: none;
+  border-bottom: 2px solid white;
+}
 
 @keyframes fadeIn {
   from {
@@ -232,5 +268,5 @@ li {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
